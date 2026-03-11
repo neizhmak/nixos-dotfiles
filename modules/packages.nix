@@ -27,6 +27,15 @@
     })
   ];
 
+  # Fix Antigravity "waiting for command completion"
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+    icu
+    openssl
+];
+
   # Программы пользователя
   users.users.user.packages = with pkgs; [
     antigravity
