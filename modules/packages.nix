@@ -49,5 +49,8 @@
     qemu
     python3
     gcc
+    gemini-cli
+    nodejs
+    cargo-modules
   ];
 }
